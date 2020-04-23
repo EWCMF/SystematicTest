@@ -63,4 +63,20 @@ class MethodsTestedTest {
         int output = methodsTested.maxValueOf(a, b);
         assertEquals(b, output);
     }
+
+    @Test
+    void findBy1() {
+        int input = 4700;
+        MethodsTested methodsTested = new MethodsTested();
+        String output = methodsTested.findBy(input);
+        assertEquals("Næstved", output);
+    }
+
+    @Test
+    void findBy2() {
+        int input = 4700000;
+        MethodsTested methodsTested = new MethodsTested();
+        String output = methodsTested.findBy(input);
+        assertNull(output);
+    }
 }
